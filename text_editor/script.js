@@ -40,7 +40,7 @@ const initializer = () => {
     highlighter(spacingButtons, true);
 
     // Highlight the format buttons
-    highlighter(formatButtons, flase);
+    highlighter(formatButtons, false);
 
     // Highlight the script buttons
     highlighter(scriptButtons, true);
