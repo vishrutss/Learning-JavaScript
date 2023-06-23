@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Editor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="options">
+            <button id="bold" class="option-button format">
+                <i class="fa-solid fa-bold"></i>
+            </button>
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i>
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+            <button id="orderedList" class="option-button">
+                <i class="fa-solid fa-list-ol"></i>
+            </button>
+            <button id="unorderedList" class="option-button">
+                <i class="fa-solid fa-list-ul"></i>
+            </button>
+            <button id="undo" class="option-button">
+                <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <button id="redo" class="option-button">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button id="link" class="adv-option-button">
+                <i class="fa-solid fa-link"></i>
+            </button>
+            <button id="unlink" class="option-button">
+                <i class="fa-solid fa-link-slash"></i>
+            </button>
+            <button id="leftAlign" class="option-button align">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button id="centerAlign" class="option-button align">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button id="rightAlign" class="option-button align">
+                <i class="fa-regular fa-align-right"></i>
+            </button>
+            <button id="justify" class="option-button align">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+            <select id="formatBlock" class="adv-option-button">
+                <option value="H1">Heading 1</option>
+                <option value="H2">Heading 2</option>
+                <option value="H3">Heading 3</option>
+                <option value="H4">Heading 4</option>
+                <option value="H5">Heading 5</option>
+                <option value="H6">Heading 6</option>
+            </select>
+            <select id="fontName" class="adv-option-button"></select>
+            <select id="fontName" class="adv-option-button"></select>
+            <div class="input-wrapper">
+                <input type="color" id="foreColor" class="adv-option-button">
+                <label for="backColor">Highlight Color</label>
+            </div>
+        </div>
+        <div id="text-input" contenteditable="true"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
