@@ -1,6 +1,6 @@
 // Get all the option buttons
-let optionsButtons = document.querySelectorAll('.option-button');
-let advancedOptionButton=document.querySelectorAll('.adv-option-button');
+let optionsButtons = document.querySelectorAll(".option-button");
+let advancedOptionButton=document.querySelectorAll(".adv-option-button");
 
 // Get the font name, font size, and writing area elements
 let fontName = document.getElementById("fontName");
@@ -125,4 +125,4 @@ const highlighterRemover = (className) => {
 };
 
 // Initialize the text editor
-window.onload = intializer();
+window.onload = initializer();
