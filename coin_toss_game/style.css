@@ -78,9 +78,9 @@ button{
 }
 
 #toss:disabled{
-    background: #307593;
+    background: #95cbe2;
     color: #fff;
-    border-color: #0f2027;
+    cursor: not-allowed;
 }
 
 #reset{
