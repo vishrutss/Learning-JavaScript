@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #73b3de;
+}
+
+.container{
+    width: 500px;
+    background-color: #fff;
+    padding: 80px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h2 span{
+    color: #73b3de;
+}
+
+.wrapper1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 70px 0;
+    gap: 20px;
+}
+
+.wrapper1 input{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #73b3de;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 30px;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input{
+    padding: 15px 10px;
+    border: 1px solid #73b3de;
+    border-radius: 5px;
+    color: #73b3de;
+    outline: none;
+}
+
+input:focus{
+    border: 2px solid #2f47fb;
+}
+
+label{
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.wrapper2 input, .wrapper3 input{
+    width: 100%;
+    font-size: 18px;
+}
