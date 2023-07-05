@@ -8,6 +8,9 @@ let time = 60;
 let timer = "";
 let mistakes = 0;
 
+/**
+ * Fetches a new quote from the API and renders it on the page.
+ */
 const renderNewQuote = async () => {
     const response = await fetch(quoteApiUrl);
     let data = await response.json();
@@ -16,7 +19,7 @@ const renderNewQuote = async () => {
     let arr=quote.split("").map((value) => {
         return "<span class='quote-chars'>" + value + "</span>";
     });
-    quoteSection.innerHTML = arr.join("");
+    quoteSection.innerHTML += arr.join("");
 };
 
 userInput.addEventListener("input", () => {
@@ -24,25 +27,25 @@ userInput.addEventListener("input", () => {
     quoteChars = Array.from(quoteChars);
 
     let userInputChars = userInput.value.split("");
-    quoteChars.forEach((charSpan, index) => {
-        if(charSpan.innerText == userInputChars[index]) {
-            charSpan.classList.add("correct");
+    quoteChars.forEach((char, index) => {
+        if(char.innerText == userInputChars[index]) {
+            char.classList.add("success");
         } else if (userInputChars[index] == null) {
-            if (char.classList.contains("correct")) {
-                charSpan.classList.remove("correct");
+            if (char.classList.contains("success")) {
+                char.classList.remove("success");
             } else {
-                char.classList.remove("incorrect");
+                char.classList.remove("fail");
             }
         } else {
-            if (!char.classList.contains("incorrect")) {
+            if (!char.classList.contains("fail")) {
                 mistakes++;
-                char.classList.add("incorrect");
+                char.classList.add("fail");
             }
             document.getElementById("mistakes").innerText = mistakes;
         }
 
         let check = quoteChars.every((element) => {
-            return element.classList.contains("correct");
+            return element.classList.contains("success");
         });
 
         if(check) {
@@ -51,6 +54,9 @@ userInput.addEventListener("input", () => {
     });
 });
 
+/**
+ * Updates the timer display every second.
+ */
 function updateTimer() {
     if(time == 0) {
         displayResult();
@@ -59,11 +65,17 @@ function updateTimer() {
     }
 }
 
+/**
+ * Reduces the time and starts the timer.
+ */
 const timeReduce = () => {
     time = 60;
     timer = setInterval(updateTimer, 1000);
 };
 
+/**
+ * Displays the test result and calculates WPM and accuracy.
+ */
 const displayResult = () => {
     document.querySelector(".result").style.display = "block";
     clearInterval(timer);
@@ -77,7 +89,9 @@ const displayResult = () => {
     document.getElementById("accuracy").innerText = Math.round(((userInput.value.length - mistakes) / userInput.value.length) * 100) + "%";
 };
 
-//Start test
+/**
+ * Starts the test by resetting mistakes, enabling user input, and reducing the time.
+ */
 const startTest = () => {
     mistakes = 0;
     timer = "";
