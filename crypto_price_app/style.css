@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161616;
+}
+
+.coin{
+    display: flex;
+    width: 460px;
+    height: 80px;
+    border-radius: 8px;
+}
