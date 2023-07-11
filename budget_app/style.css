@@ -1,52 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: #91d7f5;
 }
 
-.wrapper{
+.wrapper {
     width: 90%;
     font-size: 16px;
     max-width: 43.753m;
     margin: 1em auto;
 }
 
-.container{
+.container {
     width: 100%;
 }
 
-.sub-container{
+.sub-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.flex-space{
+.flex-space {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.wrapper h3{
+.wrapper h3 {
     color: #363d55;
     font-weight: 500;
     margin-bottom: 0.6em;
 }
 
-.container input{
+.container input {
     display: block;
     width: 100%;
     padding: 0.6em 0.3em;
@@ -58,18 +58,19 @@ body{
     margin-bottom: 0.6em;
 }
 
-.container input:focus{
+.container input:focus {
     border-color: #587ef4;
 }
 
-.total-amount-container, .user-amount-container{
+.total-amount-container,
+.user-amount-container {
     background: #fff;
     padding: 1.25em 0.9em;
     border-radius: 0.3em;
     box-shadow: 0 0 10px;
 }
 
-.output-container{
+.output-container {
     background-color: #587ef4;
     color: #fff;
     border-radius: 0.3em;
@@ -78,19 +79,19 @@ body{
     padding: 1.2em;
 }
 
-.output-container p{
+.output-container p {
     font-weight: 500;
     margin-bottom: 0.6em;
 }
 
-.output-container span{
+.output-container span {
     display: block;
     text-align: center;
     font-weight: 400;
     color: #e5e5e5;
 }
 
-.submit{
+.submit {
     font-size: 1em;
     margin-top: 0.8em;
     background-color: #587ef4;
@@ -102,14 +103,14 @@ body{
     cursor: pointer;
 }
 
-.list{
+.list {
     background-color: #fff;
     padding: 1.8em 1.2em;
     box-shadow: 0 0 10px;
     border-radius: 0.6em;
 }
 
-.sublist-content{
+.sublist-content {
     width: 100%;
     border-left: 0.3em solid #587ef4;
     margin-bottom: 0.6em;
@@ -118,39 +119,40 @@ body{
     grid-template-columns: 3fr 2fr 1fr 1fr;
 }
 
-.product{
+.product {
     font-weight: 500;
     color: #363d55;
 }
 
-.amount{
+.amount {
     color: #414a67;
     margin-left: 20%;
 }
 
-.icons-container{
+.icons-container {
     width: 5em;
     margin: 1.2em;
     align-items: center;
 }
 
-.product-title{
+.product-title {
     margin-bottom: 1em;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.error{
+.error {
     color: #ff465a;
 }
 
-.edit{
+.edit {
     margin-left: auto;
 }
 
-.edit, .delete{
+.edit,
+.delete {
     background: transparent;
     cursor: pointer;
     margin-right: 1.5em;
@@ -159,11 +161,11 @@ body{
 }
 
 @media screen and (max-width: 600px) {
-    .wrapper{
+    .wrapper {
         font-size: 14px;
     }
 
-    .sub-container{
+    .sub-container {
         grid-template-columns: 1fr;
         gap: 1em;
     }
